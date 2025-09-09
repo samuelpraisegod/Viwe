@@ -2,91 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DivoraSplit - Co-Funding Requests</title>
+  <title>Sign Up - DivoraSplit</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f6f8;
+      background: linear-gradient(135deg, #0d6efd, #6610f2);
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .request {
+    .signup-container {
       background: white;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 350px;
+      text-align: center;
     }
-    .status {
-      font-weight: bold;
-      margin-top: 10px;
+    .signup-container h1 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #333;
     }
-    .pending { color: orange; }
-    .active { color: green; }
-    .accepted { color: blue; }
-    .canceled { color: red; }
-    .actions button {
-      margin: 5px 5px 0 0;
-      padding: 6px 12px;
+    .signup-container p {
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+    .btn {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
+      font-size: 14px;
     }
-    .accept { background: #28a745; color: white; }
-    .decline { background: #dc3545; color: white; }
-    .view { background: #007bff; color: white; }
+    .btn-google {
+      background: #db4437;
+      color: white;
+    }
+    .btn-email {
+      background: #0d6efd;
+      color: white;
+    }
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .terms {
+      font-size: 12px;
+      color: #555;
+      margin: 10px 0;
+      text-align: left;
+    }
+    .terms a {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    .checkbox {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 12px;
+      color: #555;
+      text-align: left;
+    }
+    .checkbox input {
+      margin-right: 6px;
+    }
+    .link {
+      margin-top: 15px;
+      font-size: 13px;
+    }
+    .link a {
+      color: #0d6efd;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <h1>🤝 Co-Funding Requests</h1>
-  <div id="requests"></div>
-
-  <script>
-    // Replace with your MockAPI.io endpoint after setup
-    const API_URL = "https://YOUR-MOCKAPI-ENDPOINT/cofunding";
-
-    // Helper to render each request
-    function renderRequest(r) {
-      return `
-        <div class="request">
-          <h3>${r.propFirm} – ${r.accountSize} (Price: $${r.accountPrice})</h3>
-          <p><strong>Requester:</strong> ${r.requester}</p>
-          <p><strong>Contribution Split:</strong> ${r.contributionSplit}</p>
-          <p><strong>Requester Locked:</strong> $${r.requesterLocked}</p>
-          <p><strong>Partner Locked:</strong> ${r.partnerLocked !== null ? "$" + r.partnerLocked : "Pending"}</p>
-          <p><strong>Profit Split Agreement:</strong> ${r.contributionSplit}</p>
-          <p class="status ${r.status.toLowerCase()}">Status: ${r.status}</p>
-          <p>${r.note}</p>
-          <div class="actions">
-            ${r.status === "Pending" ? `
-              <button class="accept">Accept & Lock Funds</button>
-              <button class="decline">Decline</button>
-            ` : ""}
-            ${r.status === "Active" ? `
-              <button class="view">View Agreement</button>
-              <button class="view">Chat with Partner</button>
-            ` : ""}
-            ${r.status === "Accepted" ? `
-              <button class="view">View Details</button>
-            ` : ""}
-          </div>
-        </div>
-      `;
-    }
-
-    // Fetch and display
-    fetch(API_URL)
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("requests").innerHTML = data.map(renderRequest).join("");
-      })
-      .catch(err => {
-        console.error("Error fetching data:", err);
-      });
-  </script>
+  <div class="signup-container">
+    <h1>Create Account</h1>
+    <p>Unlock limitless trading opportunities</p>
+    
+    <button class="btn btn-google">Sign up with Google</button>
+    <p>or Sign up with Email</p>
+    
+    <form>
+      <input type="text" class="input-field" placeholder="Full Name" required>
+      <input type="email" class="input-field" placeholder="Email" required>
+      <input type="password" class="input-field" placeholder="Password" required>
+      
+      <p class="terms">
+        By signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+      </p>
+      
+      <div class="checkbox">
+        <input type="checkbox" id="consent">
+        <label for="consent">I consent to receive marketing emails.</label>
+      </div>
+      
+      <button type="submit" class="btn btn-email">Sign Up</button>
+    </form>
+    
+    <div class="link">
+      Already have an account? <a href="#">Log in</a>
+    </div>
+  </div>
 </body>
 </html>
