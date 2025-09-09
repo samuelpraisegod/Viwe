@@ -35,7 +35,7 @@
       font-weight: bold;
     }
     .cards {
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
     }
     .card {
@@ -87,14 +87,16 @@
     <div class="card">
       <div class="status pending">🟡 Pending Request</div>
       <p><strong>Prop Firm:</strong> FTMO</p>
-      <p><strong>Request ID:</strong> CF-2025-001</p>
+      <p><strong>Account Size:</strong> $1,000</p>
+      <p><strong>Account Price:</strong> $15</p>
       <p><strong>Requester:</strong> Mr A</p>
-      <p><strong>Account Size:</strong> $10,000</p>
-      <p><strong>Contribution:</strong> $5,000</p>
-      <p><strong>Profit Split:</strong> 50/50 → Mr A: $5,000 | Partner: $5,000</p>
-      <p><strong>Created On:</strong> Sept 9, 2025</p>
+      <p><strong>Contribution (50%):</strong> $7.50 each</p>
+      <p><strong>Profit Split Agreement:</strong> 50/50</p>
+      <p><strong>Requester Locked Amount:</strong> $7.50</p>
+      <p><strong>Partner Locked Amount:</strong> Pending</p>
+      <p><strong>Requirement:</strong> You must have at least <b>$7.50</b> available balance to accept</p>
       <div class="actions">
-        <button class="accept">Accept</button>
+        <button class="accept">Accept & Lock Funds</button>
         <button class="decline">Decline</button>
       </div>
     </div>
@@ -102,29 +104,33 @@
     <!-- Active -->
     <div class="card">
       <div class="status active">🟢 Active Request</div>
-      <p><strong>Prop Firm:</strong> MyForexFunds</p>
-      <p><strong>Request ID:</strong> CF-2025-002</p>
+      <p><strong>Prop Firm:</strong> FTMO</p>
+      <p><strong>Account Size:</strong> $1,000</p>
+      <p><strong>Account Price:</strong> $15</p>
       <p><strong>Requester:</strong> Mr A</p>
-      <p><strong>Account Size:</strong> $20,000</p>
-      <p><strong>Contribution:</strong> $10,000</p>
-      <p><strong>Profit Split:</strong> 60/40 → Mr A: $12,000 | Partner: $8,000</p>
-      <p><strong>Started On:</strong> Sept 1, 2025</p>
+      <p><strong>Contribution (50%):</strong> $7.50 each</p>
+      <p><strong>Profit Split Agreement:</strong> 50/50</p>
+      <p><strong>Requester Locked Amount:</strong> $7.50</p>
+      <p><strong>Partner Locked Amount:</strong> $7.50</p>
+      <p>✅ Both contributions merged → <b>$15</b> account purchased successfully</p>
       <div class="actions">
         <button class="view">View Agreement</button>
-        <button class="view">Chat</button>
+        <button class="view">Chat with Partner</button>
       </div>
     </div>
 
     <!-- Accepted -->
     <div class="card">
       <div class="status accepted">✅ Accepted Request</div>
-      <p><strong>Prop Firm:</strong> E8 Funding</p>
-      <p><strong>Request ID:</strong> CF-2025-003</p>
+      <p><strong>Prop Firm:</strong> MyForexFunds</p>
+      <p><strong>Account Size:</strong> $2,000</p>
+      <p><strong>Account Price:</strong> $30</p>
       <p><strong>Requester:</strong> Mr A</p>
-      <p><strong>Account Size:</strong> $5,000</p>
-      <p><strong>Contribution:</strong> $2,500</p>
-      <p><strong>Profit Split:</strong> 50/50 → Mr A: $2,500 | Partner: $2,500</p>
-      <p><strong>Accepted On:</strong> Aug 28, 2025</p>
+      <p><strong>Contribution (50%):</strong> $15 each</p>
+      <p><strong>Profit Split Agreement:</strong> 60/40</p>
+      <p><strong>Requester Locked Amount:</strong> $15</p>
+      <p><strong>Partner Locked Amount:</strong> $15</p>
+      <p>🔒 Account purchase scheduled after verification</p>
       <div class="actions">
         <button class="view">View Details</button>
       </div>
@@ -133,14 +139,15 @@
     <!-- Canceled -->
     <div class="card">
       <div class="status canceled">🔴 Canceled Request</div>
-      <p><strong>Prop Firm:</strong> The5ers</p>
-      <p><strong>Request ID:</strong> CF-2025-004</p>
+      <p><strong>Prop Firm:</strong> E8 Funding</p>
+      <p><strong>Account Size:</strong> $5,000</p>
+      <p><strong>Account Price:</strong> $50</p>
       <p><strong>Requester:</strong> Mr A</p>
-      <p><strong>Account Size:</strong> $15,000</p>
-      <p><strong>Contribution:</strong> $7,500</p>
-      <p><strong>Profit Split:</strong> 70/30 → Mr A: $10,500 | Partner: $4,500</p>
-      <p><strong>Canceled On:</strong> Sept 5, 2025</p>
-      <p><strong>Reason:</strong> Request withdrawn by Mr A</p>
+      <p><strong>Contribution (50%):</strong> $25 each</p>
+      <p><strong>Profit Split Agreement:</strong> 70/30</p>
+      <p><strong>Requester Locked Amount:</strong> Refunded ($25)</p>
+      <p><strong>Partner Locked Amount:</strong> Not Provided</p>
+      <p><strong>Status:</strong> Request canceled (Partner declined / Insufficient balance)</p>
     </div>
 
   </div>
