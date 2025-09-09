@@ -19,13 +19,14 @@
       display: flex;
       justify-content: center;
       margin-bottom: 20px;
+      flex-wrap: wrap;
     }
     .tab {
       background: #fff;
       border: 1px solid #ccc;
       padding: 10px 20px;
       cursor: pointer;
-      margin: 0 5px;
+      margin: 5px;
       border-radius: 5px;
     }
     .tab.active {
@@ -73,10 +74,10 @@
 
   <!-- Tabs -->
   <div class="tabs">
-    <div class="tab active">Pending</div>
-    <div class="tab">Active</div>
-    <div class="tab">Accepted</div>
-    <div class="tab">Canceled</div>
+    <div class="tab active">Pending Requests</div>
+    <div class="tab">Active Requests</div>
+    <div class="tab">Accepted Requests</div>
+    <div class="tab">Canceled Requests</div>
   </div>
 
   <!-- Request Cards -->
@@ -84,12 +85,13 @@
 
     <!-- Pending -->
     <div class="card">
-      <div class="status pending">🟡 Pending</div>
+      <div class="status pending">🟡 Pending Request</div>
+      <p><strong>Prop Firm:</strong> FTMO</p>
       <p><strong>Request ID:</strong> CF-2025-001</p>
       <p><strong>Requester:</strong> Mr A</p>
       <p><strong>Account Size:</strong> $10,000</p>
       <p><strong>Contribution:</strong> $5,000</p>
-      <p><strong>Profit Split:</strong> 50/50</p>
+      <p><strong>Profit Split:</strong> 50/50 → Mr A: $5,000 | Partner: $5,000</p>
       <p><strong>Created On:</strong> Sept 9, 2025</p>
       <div class="actions">
         <button class="accept">Accept</button>
@@ -99,12 +101,13 @@
 
     <!-- Active -->
     <div class="card">
-      <div class="status active">🟢 Active</div>
+      <div class="status active">🟢 Active Request</div>
+      <p><strong>Prop Firm:</strong> MyForexFunds</p>
       <p><strong>Request ID:</strong> CF-2025-002</p>
       <p><strong>Requester:</strong> Mr A</p>
       <p><strong>Account Size:</strong> $20,000</p>
       <p><strong>Contribution:</strong> $10,000</p>
-      <p><strong>Profit Split:</strong> 60/40</p>
+      <p><strong>Profit Split:</strong> 60/40 → Mr A: $12,000 | Partner: $8,000</p>
       <p><strong>Started On:</strong> Sept 1, 2025</p>
       <div class="actions">
         <button class="view">View Agreement</button>
@@ -114,12 +117,13 @@
 
     <!-- Accepted -->
     <div class="card">
-      <div class="status accepted">✅ Accepted</div>
+      <div class="status accepted">✅ Accepted Request</div>
+      <p><strong>Prop Firm:</strong> E8 Funding</p>
       <p><strong>Request ID:</strong> CF-2025-003</p>
       <p><strong>Requester:</strong> Mr A</p>
       <p><strong>Account Size:</strong> $5,000</p>
       <p><strong>Contribution:</strong> $2,500</p>
-      <p><strong>Profit Split:</strong> 50/50</p>
+      <p><strong>Profit Split:</strong> 50/50 → Mr A: $2,500 | Partner: $2,500</p>
       <p><strong>Accepted On:</strong> Aug 28, 2025</p>
       <div class="actions">
         <button class="view">View Details</button>
@@ -128,12 +132,13 @@
 
     <!-- Canceled -->
     <div class="card">
-      <div class="status canceled">🔴 Canceled</div>
+      <div class="status canceled">🔴 Canceled Request</div>
+      <p><strong>Prop Firm:</strong> The5ers</p>
       <p><strong>Request ID:</strong> CF-2025-004</p>
       <p><strong>Requester:</strong> Mr A</p>
       <p><strong>Account Size:</strong> $15,000</p>
       <p><strong>Contribution:</strong> $7,500</p>
-      <p><strong>Profit Split:</strong> 70/30</p>
+      <p><strong>Profit Split:</strong> 70/30 → Mr A: $10,500 | Partner: $4,500</p>
       <p><strong>Canceled On:</strong> Sept 5, 2025</p>
       <p><strong>Reason:</strong> Request withdrawn by Mr A</p>
     </div>
